@@ -109,3 +109,52 @@ reads content of the file where the hash begins with a3798b, with pretty option
     $ git merge work	        Command merges work branch into the current branch
     $ git merge --abort         Command canceles the merge if in conflict state 
 
+Here are some standard situations, and a git command. Draw the result, and add some explanation:
+
+Example 1:
+
+    A - B (master)
+         \
+          C (work)
+    
+    $ git checkout master
+    $ git merge work
+
+Result and explanation here:
+
+    A - B - C (HEAD -> master, work)
+
+
+Example 2:
+
+    A - B - C - D (master)
+         \
+          X - Y (work)
+    
+    $ git checkout master
+    $ git merge work
+
+Result and explanation here:
+
+    A - B - C - D - E (HEAD -> master)
+         \        /
+          X - Y (work)
+
+
+Example 3:
+
+    A - B - C - D (master)
+         \
+          X - Y (work)
+    
+    $ git checkout work
+    $ git merge master
+    $ git checkout master
+    $ git merge work
+
+Result and explanation here:
+
+    A - B - C - D
+         \       \
+          X - Y - E (HEAD -> master, work)
+
