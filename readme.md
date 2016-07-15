@@ -14,15 +14,21 @@ and place your solution in a fitting category in this file.
 
 ## Creating repositories
 
-... put commands and explanation here
+git init
+it initiales a local repo
 
 ## Staging and committing
 
-... put commands and explanation here
+    git add .
+add all files (but new ones?)
+
+    git commit -m "Add something"
+commit with the commit message "Add something"
 
 ## Inspecting the repository and history
 
-... put commands and explanation here
+    git status
+    git log
 
 ## Managing branches
 
@@ -38,6 +44,16 @@ and place your solution in a fitting category in this file.
     $ git branch -d work        Delete branch "work", stop when something is open/pending/not merged
     $ git branch -D work        Delete branch "work", hard delete also when something is still open
 
+    git checkout -b feature
+create branch feature1
+
+git branch
+show all branches
+
+    git branch -a
+show all branches, also remotes
+
 ## Merging
 
-.. put commands and examples here
+    git merge feature1
+merge branch feature1 into current branch
