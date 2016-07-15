@@ -25,6 +25,7 @@ Example 1:
     $ git merge work
 
 Result and explanation here:
+    A - B - C (HEAD -> master, work)
 
 
 Example 2:
@@ -37,7 +38,9 @@ Example 2:
     $ git merge work
 
 Result and explanation here:
-
+    A - B - C - D - E (HEAD -> master)
+         \        /
+          X - Y (work)
 
 
 Example 3:
@@ -52,7 +55,8 @@ Example 3:
     $ git merge work
 
 Result and explanation here:
-
-
+    A - B - C - D
+         \       \
+          X - Y - E (HEAD -> master, work)
 
 Add you answers to the file readme.md!

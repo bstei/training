@@ -22,12 +22,14 @@ and place your solution in a fitting category in this file.
 
 ## Inspecting the repository and history
 
-... put commands and explanation here
+$ git cat-file -p a3798b    Command reads content of the file beggining with a3798b with pretty option
 
 ## Managing branches
 
-... put commands and explanation here
+$ git checkout work         Command switches to a branch named work.
+$ git checkout master	    Command switches to a master branch. 
 
 ## Merging
 
-.. put commands and examples here
+$ git merge work	        Command merges work branch into the current branch
+$ git merge --abort         Command canceles the merge if in conflict state 
