@@ -98,25 +98,14 @@ reads content of the file where the hash begins with a3798b, with pretty option
     $ git branch -d work        Delete branch "work", stop when something is open/pending/not merged
     $ git branch -D work        Delete branch "work", hard delete also when something is still open
 
-    git checkout -b feature
-create branch feature1
-
-git branch
-show all branches
-
-    git branch -a
-show all branches, also remotes
-
 ## Merging
 
 
-    $ git diff shows changes of the file and opens kdiff 
-    $ git diff --staged shows difference of staged files
-    $ git diff test.txt shows difference in this file and between two commits
-    $ git diff --theirs shows theirs version and shows difference
-    $ git diff --ours shows what you had in your branch before commit and merge
+    $ git diff                  shows changes of the file and opens kdiff 
+    $ git diff --staged         shows difference of staged files
+    $ git diff test.txt         shows difference in this file and between two commits
+    $ git diff --theirs         shows theirs version and shows difference
+    $ git diff --ours           shows what you had in your branch before commit and merge
     $ git merge work	        Command merges work branch into the current branch
     $ git merge --abort         Command canceles the merge if in conflict state 
 
-    git merge feature1
-merge branch feature1 into current branch
