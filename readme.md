@@ -14,16 +14,28 @@ and place your solution in a fitting category in this file.
 
 ## Creating repositories
 
-git init
-it initiales a local repo
+    git init                    it initiales a local repo
+
+    git clone https://...       copies the whole repo with all branches to local
 
 ## Staging and committing
 
-    git add .
-add all files (but new ones?)
+    git add .                   Add all changes but new files and deletions
 
-    git commit -m "Add something"
-commit with the commit message "Add something"
+    git add -u                  Removes as well as modifies index entries to match the working tree, but adds no new files.
+    git add -A                  Same like above but also adds new files.
+
+    git add test.txt            Add the test.txt file to the stage
+
+    git reset HEAD test.txt     Resets test.txt to thes state of HEAD, means unstage already staged changes
+
+    git diff --staged           Show diff of already staged changes to HEAD
+
+    git commit                  Starts committing and opens a text editor for putting in the message
+
+    git commit -a               also adds changes from all known files (skips add)
+
+    git commit -m "Add smthg"   Commit with the commit message "Add something"
 
 ## Inspecting the repository and history
 
