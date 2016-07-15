@@ -12,46 +12,77 @@ Read your group instruction in the text files
 
 and place your solution in a fitting category in this file.
 
+
 ## Creating repositories
 
-    git init                    it initiales a local repo
+    $ git init                    turns the  local folder into a git repository
 
-    git clone https://...       copies the whole repo with all branches to local
+    $ git clone https://...       copies the whole repo with all branches to local
 
 ## Staging and committing
 
-    git add .                   Add all changes but new files and deletions
+    $ git add test.txt            Add the test.txt file to the stage
 
-    git add -u                  Removes as well as modifies index entries to match the working tree, but adds no new files.
-    git add -A                  Same like above but also adds new files.
+    $ git add .                   Add all changes and new files (but no deletions)
 
-    git add test.txt            Add the test.txt file to the stage
+    $ git add -u                  stages everything which was already tracked (modifications and deletions)
+    
+    $ git add -A                  Same like above but also adds new files.
 
-    git reset HEAD test.txt     Resets test.txt to thes state of HEAD, means unstage already staged changes
 
-    git diff --staged           Show diff of already staged changes to HEAD
+    $ git reset HEAD test.txt     Resets test.txt to thes state of HEAD, means unstage already staged changes
 
-    git commit                  Starts committing and opens a text editor for putting in the message
+    $ git diff --staged           Show diff of already staged changes to HEAD
 
-    git commit -a               also adds changes from all known files (skips add)
+    $ git commit                  Starts committing and opens a text editor for putting in the message
 
-    git commit -m "Add smthg"   Commit with the commit message "Add something"
+    $ git commit -a               also adds changes from all known files (skips add)
+
+    $ git commit -m "Add smthg"   Commit with the commit message "Add something"
 
 ## Inspecting the repository and history
 
-    
-    $ git log shows the commits of the current branch
-    $ git log --oneline shows all commits but only one line commit info
-    $ git log --oneline --all shows the history of all files including all branches, but only with one line commit info
-    $ git log --oneline --all --graph graph that shows the branches and shows the branch and merge history
-    $ git log --oneline --all --graph --decorate shows the branch and merge history, and puts more colors in there and gives the names to the branch
-    $ git log --follow -p -- filename shows the history of the file 
-    $ git log -S'static void Main' searches for the "static void main" string
-    $ git log --pretty=format:"%h - %an, %ar : %s" allows you to specify your own log format (commit hash, author name, author date, subject)
-    $ git cat-file -p a3798b    Command reads content of the file beggining with a3798b with pretty option
-    git status
-    git log
+    $ git status                
 
+prints the current state of the repository, hints at next steps
+        
+    $ git log 
+
+shows the commits of the current branch
+
+    $ git log --oneline 
+
+shows all commits but only one line commit info
+ 
+    $ git log --oneline --all
+
+shows the history of all files including all branches, but only with one line commit info
+
+    $ git log --oneline --all --graph
+
+graph that shows the branches and shows the branch and merge history
+
+    $ git log --oneline --all --graph --decorate
+
+shows the branch and merge history, and puts more colors in there and gives the names to the branch
+
+    $ git log --follow -p -- filename 
+
+shows the history of the file, with pretty printing, following the history even in case of renaming.
+
+    $ git log -S'static void Main'
+
+searches for the "static void main" string (pickaxe)
+
+    $ git log --pretty=format:"%h - %an, %ar : %s"
+
+allows you to specify your own log format (commit hash, author name, author date, subject)
+
+    $ git cat-file -p a3798b    
+
+reads content of the file where the hash begins with a3798b, with pretty option
+    
+    
 ## Managing branches
 
     $ git checkout work         Command switches to a branch named work.
